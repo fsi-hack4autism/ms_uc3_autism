@@ -11,7 +11,10 @@
 * CR(CentralReach) x Microsoft Clinical Data Project CentralReach
 ![RAW Data](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/sample_raw.png)
 
-* ![Profiling](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/exploratory_ana.png)
+* Data Profiling
+![Profiling](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/data_desc.png)
+![Profiling](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/exploratory_ana.png)
+
 
 
 ### Part 1: Supervised Model: To predict the success of a goal
