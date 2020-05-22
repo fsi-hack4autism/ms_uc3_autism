@@ -79,9 +79,21 @@
 ### Part 3: Feature Analysis to recommend right service providers based on their expertise.
 
 * Calculates the success_percentage based on the success of specific trials over time.
-* ![ReadMe](https://github.com/dipeshtech/ms_uc3_autism/blob/master/README_providers.md)
+* Can help recommend right service provider for the problem area.
+* ![ReadMe](https://github.com/dipeshtech/ms_uc3_autism/blob/master/Domain_Expert_Recommendation.ipynb)
+
+#### Time Series Analysis:
+* Client-Provider Relationship: Time series forecasting for trial values (success and failure) follows a uniform trend. Example: Predicting whether the trial is going to succeed for a given client and provider based on history.
+
+* In this case, the trend in increasing number of trial failures resulted in a termination of the relationship.
+
+* ![Time Series Analysis](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/ts_1.png)
+
+* ![Distribution of Domain Experts](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/top_10.png)
+ 
+ * Time distribution can help identify the period for which the relationship will be effective in accomplishing goals.
 
 
 ### Future Work:
 * Extension of part3 to incorporate in the Machine Learning model for Provider Effectiveness
-* 
+* Refinement of overall work to understand the effectiveness of model based on Field evaluations.
