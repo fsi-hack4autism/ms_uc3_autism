@@ -9,7 +9,7 @@
 
 ### Data
 * CR(CentralReach) x Microsoft Clinical Data Project CentralReach
-![RAW Data][https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/sample_raw.png]
+![RAW Data](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/sample_raw.png)
 
 
 ### Part 1: Supervised Model: To predict the success of a goal
@@ -42,13 +42,13 @@
 ##### Variable Importance:
 
 * Random Forest Variable Importance
-![Variable Importance][https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/variable_importance_RF.png]
+![Variable Importance](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/variable_importance_RF.png)
 
 ##### Confusion Martrix
-![Confusion Matrix][https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/confusion_matrix_rf.png]
+![Confusion Matrix](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/confusion_matrix_rf.png)
 
 ##### ROC-AUC Curve:
-![Confusion Matrix][https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/roc_auc_rf.png]
+![Confusion Matrix](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/roc_auc_rf.png)
 
 
 ### Part 2: Un-Supervised Model: To predict the success of a goal
@@ -71,7 +71,7 @@
 ![Variable Importance](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/variable_importance_kmeans.png)
 
 ##### K-Means Summary:
-![Confusion Matrix][https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/kmeans_summ.png]
+![Confusion Matrix](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/kmeans_summ.png)
 
 #### Models Trained: 
 * K-Means Clustering
@@ -79,7 +79,7 @@
 ### Part 3: Feature Analysis to recommend right service providers based on their expertise.
 
 * Calculates the success_percentage based on the success of specific trials over time.
-* ![ReadMe][https://github.com/dipeshtech/ms_uc3_autism/README_providers.md]
+* ![ReadMe](https://github.com/dipeshtech/ms_uc3_autism/README_providers.md)
 
 
 ### Future Work:
