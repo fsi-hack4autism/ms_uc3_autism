@@ -79,7 +79,7 @@
 ### Part 3: Feature Analysis to recommend right service providers based on their expertise.
 
 * Calculates the success_percentage based on the success of specific trials over time.
-* ![ReadMe](https://github.com/dipeshtech/ms_uc3_autism/README_providers.md)
+* ![ReadMe](https://github.com/dipeshtech/ms_uc3_autism/blob/master/README_providers.md)
 
 
 ### Future Work:
