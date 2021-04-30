@@ -39,13 +39,17 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 2. Conversion of string columns to datetime for fields containing 'Date'
 3. Conversion of categorical fields to encoded ones using Pandas Label Encoding
 
+### Initial Data Analysis
+
+![Data Analysis](images/data_analysis.png)
+
 ### Feature Engineering
 
 1. **sessionCount_byGoal_byMonthYear** : Count of sessions graphed (TrialGroup) per month per year 
 2. **sessionCount_byGoal_byDayYear** : Count of sessions graphed (TrialGroup) per day per year 
 3. **sessionCount_byGoal_byWeekYear** : Count of sessions graphed (TrialGroup) per week per year
 4. **Gender_Encoded** : Demographic Data
-5. **Age** : Demographic Data, calculated with the difference of TrialDataDate and BirthYear
+5. **Age** : Demographic Data, calculated with the difference of TrialDataDate and BirthDateYear
 6. **TrialTargetId_Encoded** : IDs of the target Goals
 7. **GoalDomain_Encoded** : Encoded goal domain value of Adaptive, Communication and Language
 8. **goalAssessment_encoded** : Encoded goal ABA assessment
@@ -71,9 +75,11 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ### Inferences
 
-1. The feature importance from the Supervised Models show that Session Count/ Treatment Intensity descriptors
-are more useful in predicting a successful outcome than the demographic features.
+1. The initial data analysis shows that the session count descriptors of days and weeks have a negative correlation with the goalForced_80Percent outcome, which can be interpreted as less number of sessions or more spread out sessions increase the chances of a successful outcome whereas a high number of sessions might lead to an unsuccessful outcome.
 
-2. The Goal ID is also a useful feature but has limitations due to high cardinality.
+2. The feature importance from the Supervised Models show that Session Count/ Treatment Intensity descriptors
+are more useful in predicting a successful outcome than the demographic features that implies that the treatment intensity/ frequency plays a more important role in the result of an outcome when compared to the gender or age of the client.
 
-3. Age is a more useful predictor for the outcome of a trial than the goal domain or trial phase.
+3. The Goal ID is also a useful feature but has limitations due to high cardinality which implies that if the goals are restricted or categorized, then they will be important in determining the outcome but if they aren't categorical, they might not be a suitable feature for the Machine Learning models due to their high cardinality.
+
+4. Age is a more useful predictor for the outcome of a trial than the goal domain or trial phase which implies that the age of the clients is a contributing factor to the success outcome of the goal.
