@@ -56,6 +56,7 @@ Given below is the feature importance distribution from the model and observatio
 
 ![Feature Importance](images/target1_feature_imp.png)
 
+
 ## Part-2: Evaluation of the effect of treatment intensity on trial outcome
 
 ### Data Cleaning and Pre-processing
