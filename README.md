@@ -1,104 +1,79 @@
-# FSI Autism Hackathon
+# Use Case 3 - Application of Machine Learning to ABA Data
 
-## Use Case #3: Application of Machine Learning to ABA Data
+This use case analyzes anonymized therapy data from a repository of Applied Behavior Analysis sessions and cases to draw insights which can be used by individual families to help understand the effectiveness of their programs. 
 
-### Below are the deliverables of the Hackathon
-* KPI for Goal Effectiveness 
-* KPI for Provider Effectiveness (rollup of KPI for Goal Effectiveness) 
-* Combined measures that predict the likelihood and speed of future success 
+## Technologies Used
 
-### Data
-* CR(CentralReach) x Microsoft Clinical Data Project CentralReach
-![RAW Data](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/sample_raw.png)
+### Languages
 
-* Data Profiling
-![Profiling](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/data_desc.png)
-![Profiling](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/exploratory_ana.png)
+1. Python
+2. SQL
 
+### Platforms
 
+1. Azure Databricks
 
-### Part 1: Supervised Model: To predict the success of a goal
+### Libraries Used
 
-#### Data Cleaning & Pre-Processing
+1. sklearn
+2. matplotlib
+3. pandas
+4. numpy
+5. databricks MLFlow
 
-* The bad records from the file with seperators in the data were dropped.
-* Bad data was imputed.
-* If the goal is met, we flag it as 1. All the other goal statuses are flagged as 0.
+## Deliverables Covered
 
-#### Feature Engineering:
+1. Evaluation of 80% as a set goal for indication of future successes
+2. Evaluation of the effect of treatment intensity on trial outcome
+3. Analysis on the correlation of therapist/author based descriptors with outcomes
 
-* Goal Length : Difference between the Goal End Date and Goal Start Date in Days
-* Goal Start Date: When the Goal was initiated 
-* Goal Met Date, Goal Hold Date, Goal In progress date, Goal Discontinued date (Depending upon the goal status)
-* Goal Domain - One hot encoded feature
-* Number of unique trials per Trial Target Id
-* Number of unique trial groups per Trial Target Id
-* Number of unique trial authors per Trial Target Id
-* Total number of successful trials
-* Total number of failed trials
-* Interaction between goal length and number of successful/failed trials
-* Interaction between number of unique authors in the goal and number of successful/failed trials
+## Data Overview
 
-#### Models Trained: 
-* Random Forest
-* XGBoost
-* Logistic Regression
+![Data Overview](data.png)
 
-##### Variable Importance:
+## Part-2: Evaluation of the effect of treatment intensity on trial outcome
 
-* Random Forest Variable Importance
-![Variable Importance](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/variable_importance_RF.png)
+### Data Cleaning and Pre-processing
 
-##### Confusion Martrix
-![Confusion Matrix](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/confusion_matrix_rf.png)
+1. Missing values are marked as 0
+2. Conversion of string columns to datetime for fields containing 'Date'
+3. Conversion of categorical fields to encoded ones using Pandas Label Encoding
 
-##### ROC-AUC Curve:
-![Confusion Matrix](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/roc_auc_rf.png)
+### Feature Engineering
 
+1. **sessionCount_byGoal_byMonthYear** : Count of sessions graphed (TrialGroup) per month per year 
+2. **sessionCount_byGoal_byDayYear** : Count of sessions graphed (TrialGroup) per day per year 
+3. **sessionCount_byGoal_byWeekYear** : Count of sessions graphed (TrialGroup) per week per year
+4. **Gender_Encoded** : Demographic Data
+5. **Age** : Demographic Data, calculated with the difference of TrialDataDate and BirthYear
+6. **TrialTargetId_Encoded** : IDs of the target Goals
+7. **GoalDomain_Encoded** : Encoded goal domain value of Adaptive, Communication and Language
+8. **goalAssessment_encoded** : Encoded goal ABA assessment
+9. **encodedTrialPhase** : Encoded Trial Phase (Baseline' -1,'Intervention' -2,'Generalization' -3,'Maintenance'-4)
+10. **goalForced_80Percent** : The target value of outcome to 80% set goal
 
-### Part 2: Un-Supervised Model: To predict the success of a goal
+### Models Used
 
-#### Data Cleaning & Pre-Processing
+1. Random Forest
+2. Decision Tree
 
-* The bad records from the file with seperators in the data were dropped.
-* Bad data was imputed.
-* If the goal is met, we flag it as 1. All the other goal statuses are flagged as 0.
+### Feature Importance
 
-#### Feature Engineering:
+![Feature Importance](feature_importance.png)
 
-* We tried to cluster the data based on the feature below and Goal Domain.
-* Calculated a feature date_diff_to_success = difference between the Goal Met and Trial Date per client
-* goals_met_per_trial_phase
+### Confusion Matrix
 
-##### Variable Importance:
+![Confusion Matrix](confusion.png)
 
-* K-Means Variable Importance
-![Variable Importance](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/variable_importance_kmeans.png)
+### ROC Curve
 
-##### K-Means Summary:
-![Confusion Matrix](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/kmeans_summ.png)
+![ROC Curve](roc.png)
 
-#### Models Trained: 
-* K-Means Clustering
+### Inferences
 
-### Part 3: Feature Analysis to recommend right service providers based on their expertise.
+1. The feature importance from the Supervised Models show that Session Count/ Treatment Intensity descriptors
+are more useful in predicting a successful outcome than the demographic features.
 
-* Calculates the success_percentage based on the success of specific trials over time.
-* Can help recommend right service provider for the problem area.
-* ![ReadMe](https://github.com/dipeshtech/ms_uc3_autism/blob/master/Domain_Expert_Recommendation.ipynb)
+2. The Goal ID is also a useful feature but has limitations due to high cardinality.
 
-#### Time Series Analysis:
-* Client-Provider Relationship: Time series forecasting for trial values (success and failure) follows a uniform trend. Example: Predicting whether the trial is going to succeed for a given client and provider based on history.
-
-* In this case, the trend in increasing number of trial failures resulted in a termination of the relationship.
-
-* ![Time Series Analysis](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/ts_1.png)
-
-* ![Distribution of Domain Experts](https://github.com/dipeshtech/ms_uc3_autism/blob/master/images/top_10.png)
- 
- * Time distribution can help identify the period for which the relationship will be effective in accomplishing goals.
-
-
-### Future Work:
-* Extension of part3 to incorporate in the Machine Learning model for Provider Effectiveness
-* Refinement of overall work to understand the effectiveness of model based on Field evaluations.
+3. Age is a more useful predictor for the outcome of a trial than the goal domain or trial phase.
