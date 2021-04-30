@@ -29,7 +29,7 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ## Data Overview
 
-![Data Overview](https://github.com/fsi-hack4autism/ms_uc3_autism/blob/master/images/data.png)
+![Data Overview](images/data.png)
 
 ## Part-2: Evaluation of the effect of treatment intensity on trial outcome
 
@@ -59,15 +59,15 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ### Feature Importance
 
-![Feature Importance](https://github.com/fsi-hack4autism/ms_uc3_autism/blob/master/images/feature_importance.png)
+![Feature Importance](images/feature_importance.png)
 
 ### Confusion Matrix
 
-![Confusion Matrix](https://github.com/fsi-hack4autism/ms_uc3_autism/blob/master/images/confusion.png)
+![Confusion Matrix](images/confusion.png)
 
 ### ROC Curve
 
-![ROC Curve](https://github.com/fsi-hack4autism/ms_uc3_autism/blob/master/images/roc.png)
+![ROC Curve](images/roc.png)
 
 ### Inferences
 
