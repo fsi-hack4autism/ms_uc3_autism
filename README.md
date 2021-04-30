@@ -77,3 +77,7 @@ are more useful in predicting a successful outcome than the demographic features
 2. The Goal ID is also a useful feature but has limitations due to high cardinality.
 
 3. Age is a more useful predictor for the outcome of a trial than the goal domain or trial phase.
+
+### Multiple therapist changes decreases success rates
+
+![Multiple therapist changes decreases success rates](images/success_ther.png)
