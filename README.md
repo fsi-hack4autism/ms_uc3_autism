@@ -80,4 +80,4 @@ are more useful in predicting a successful outcome than the demographic features
 
 ### Multiple therapist changes decreases success rates
 
-![Multiple therapist changes decreases success rates(images/success_ther.png)
+![Multiple therapist changes decreases success rates](images/success_ther.png)
