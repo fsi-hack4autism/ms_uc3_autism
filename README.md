@@ -54,7 +54,7 @@ Given below is the feature importance distribution from the model and observatio
 3. Given the other features, we have found that 
 4. TrialTarget Count per trial is another feature of importance.
 
-![Feature Importance](images/target1_feature_imp.png)
+![Feature Importance](images/target_1_feature_imp.png)
 
 
 ## Part-2: Evaluation of the effect of treatment intensity on trial outcome
