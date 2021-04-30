@@ -12,6 +12,7 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 ### Platforms
 
 1. Azure Databricks
+2. Sketch
 
 ### Libraries Used
 
@@ -20,6 +21,10 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 3. pandas
 4. numpy
 5. databricks MLFlow
+
+## Solution
+
+UI based portal for therapists, parents and clients to track the progress of goals, the journey and the metrics of the session.
 
 ## Deliverables Covered
 
@@ -30,6 +35,26 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 ## Data Overview
 
 ![Data Overview](images/data.png)
+
+## Part-1: Evaluation of 80% as a set goal for indication of future successes
+
+### Objective
+
+Find the mean goal length per goal Assessment type and see the deviation per data point
+
+Encoded the gender field and pre processed the age field
+
+To find the total time taken to reach the goal by multiplying the (Count of new sessions graphed (TrialGroup) per day per year) * (Bins of target periods)
+
+We have trained a random forest classifier to predict the final goal status.
+ 
+Given below is the feature importance distribution from the model and observations are :
+1. Age has a significant amount of impact on the model.
+2. Gender too has impact but comes second to age
+3. Given the other features, we have found that 
+4. TrialTarget Count per trial is another feature of importance.
+
+![Feature Importance](images/target1_feature_imp.png)
 
 ## Part-2: Evaluation of the effect of treatment intensity on trial outcome
 
