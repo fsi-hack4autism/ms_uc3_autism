@@ -41,7 +41,9 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ### Initial Data Analysis
 
-![Data Analysis](images/data_analysis.png)
+![Data Analysis-SessionCount](images/data_analysis.png)
+
+![Data Analysis-Age](images/age_outcome.png)
 
 ### Feature Engineering
 
@@ -88,6 +90,10 @@ are more useful in predicting a successful outcome than the demographic features
 
 ![Multiple therapist changes decreases success rates](images/success_ther.png)
 
+### Percentage pass by author changes
+
+![Percentage pass by author changes](images/pctpass.png)
+
 ## Part-3: Evaluation of graphing intensity for different age groups
 
 ### Involvement of different age groups in the trials
@@ -117,15 +123,16 @@ Based on the above categories, further analysis is done for understanding how th
 
 ![Age group 0-15](images/age0_15_trialintensity.png)
 #### Inference:
-For 0-15 age group, the success of the trials is higher for higher intensity graphing method while for low and medium intensity, the success rate is only slightly higher than unsuccessful trials
+For **0-15** age group, the success of the trials is higher for higher intensity graphing method while for low and medium intensity, the success rate is only slightly higher than unsuccessful trials
 
 ![Age group 16-25](images/age16_25_trialintensity.png)
 #### Inference:
-For 16-25 age group, most of the clients are faring well in all the categories of graphing intensity with a good success rate. It must be highlighted that the high intensity graphing method is helping perform the best among the others.
+For **16-25** age group, most of the clients are faring well in all the categories of graphing intensity with a good success rate. It must be highlighted that the high intensity graphing method is helping perform the best among the others.
 
 ![Age group 26 and above](images/age26_and_above_trialintensity.png)
 #### Inference:
-For 26 and above age group, more than 50% of the clients are performing well in all the 3 categories of the graphing intesity. But the graphing intensity is not much helpful in considering which method is best for this age group. 
+For **26 and above** age group, more than 50% of the clients are performing well in all the 3 categories of the graphing intesity. But the graphing intensity is not much helpful in considering which method is best for this age group. 
 
 ### Conclusion
 Higher intensity graphing method showed better results for the age groups between 0-15 and 16-25 but the graphing intensity did not affect much for the success of the trials for the older age group (26 and above)
+
