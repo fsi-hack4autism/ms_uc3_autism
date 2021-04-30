@@ -57,7 +57,7 @@ Given below is the feature importance distribution from the model and observatio
 ![Feature Importance](images/target_1_feature_imp.png)
 
 
-## Part-2: Evaluation of the effect of treatment intensity on trial outcome
+## Part-2a: Evaluation of the effect of treatment intensity on trial outcome
 
 ### Data Cleaning and Pre-processing
 
@@ -112,15 +112,7 @@ are more useful in predicting a successful outcome than the demographic features
 
 4. Age is a more useful predictor for the outcome of a trial than the goal domain or trial phase which implies that the age of the clients is a contributing factor to the success outcome of the goal.
 
-### Multiple therapist changes decreases success rates
-
-![Multiple therapist changes decreases success rates](images/success_ther.png)
-
-## Percentage pass by author changes
-
-![Percentage pass by author changes](images/pctpass.png)
-
-## Part-3: Evaluation of graphing intensity for different age groups
+## Part-2b: Evaluation of graphing intensity for different age groups
 
 ### Involvement of different age groups in the trials
 1. Younger clients are more involved in the trials than the older ones. 
@@ -161,3 +153,13 @@ For **26 and above** age group, more than 50% of the clients are performing well
 
 ### Conclusion
 Higher intensity graphing method showed better results for the age groups between 0-15 and 16-25 but the graphing intensity did not affect much for the success of the trials for the older age group (26 and above)
+
+## Part-3: Analysis on the correlation of therapist/author based descriptors with outcomes
+
+### Multiple therapist changes decreases success rates
+
+![Multiple therapist changes decreases success rates](images/success_ther.png)
+
+### Percentage pass by author changes
+
+![Percentage pass by author changes](images/pctpass.png)
