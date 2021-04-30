@@ -90,3 +90,7 @@ are more useful in predicting a successful outcome than the demographic features
 
 ![Multiple therapist changes decreases success rates](images/success_ther.png)
 
+### Percentage pass by author changes
+
+![Percentage pass by author changes](images/pctpass.png)
+
