@@ -41,7 +41,9 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ### Initial Data Analysis
 
-![Data Analysis](images/data_analysis.png)
+![Data Analysis-SessionCount](images/data_analysis.png)
+
+![Data Analysis-Age](images/age_outcome.png)
 
 ### Feature Engineering
 
