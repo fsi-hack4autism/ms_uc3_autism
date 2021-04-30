@@ -29,7 +29,7 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ## Data Overview
 
-![Data Overview](data.png)
+![Data Overview](images/data.png)
 
 ## Part-2: Evaluation of the effect of treatment intensity on trial outcome
 
@@ -59,15 +59,15 @@ This use case analyzes anonymized therapy data from a repository of Applied Beha
 
 ### Feature Importance
 
-![Feature Importance](feature_importance.png)
+![Feature Importance](images/feature_importance.png)
 
 ### Confusion Matrix
 
-![Confusion Matrix](confusion.png)
+![Confusion Matrix](images/confusion.png)
 
 ### ROC Curve
 
-![ROC Curve](roc.png)
+![ROC Curve](images/roc.png)
 
 ### Inferences
 
